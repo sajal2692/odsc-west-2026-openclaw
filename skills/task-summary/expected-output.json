@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-10-27",
+  "open_count": 9,
+  "overdue": [
+    {
+      "task": "Send Q4 budget draft to finance",
+      "due": "2026-10-24",
+      "priority": "high",
+      "tags": [
+        "work"
+      ],
+      "section": "This Week"
+    },
+    {
+      "task": "Renew library books",
+      "due": "2026-10-26",
+      "priority": "low",
+      "tags": [
+        "life"
+      ],
+      "section": "This Week"
+    }
+  ],
+  "due_soon": [
+    {
+      "task": "Review pull request for search filters",
+      "due": "2026-10-27",
+      "priority": "high",
+      "tags": [
+        "work"
+      ],
+      "section": "This Week"
+    },
+    {
+      "task": "Book flights for the November conference",
+      "due": "2026-10-29",
+      "priority": "medium",
+      "tags": [
+        "travel"
+      ],
+      "section": "This Week"
+    },
+    {
+      "task": "Prepare slides for the team demo",
+      "due": "2026-10-30",
+      "priority": "high",
+      "tags": [
+        "work"
+      ],
+      "section": "This Week"
+    },
+    {
+      "task": "Call the plumber about the kitchen sink",
+      "due": "2026-11-02",
+      "priority": "medium",
+      "tags": [
+        "home"
+      ],
+      "section": "This Week"
+    }
+  ],
+  "by_priority": {
+    "high": 3,
+    "medium": 3,
+    "low": 2,
+    "none": 1
+  }
+}

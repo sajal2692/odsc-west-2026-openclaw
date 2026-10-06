@@ -1,0 +1,44 @@
+// The settings the scratch agent adds to ~/.openclaw/openclaw.json, for OpenClaw 2026.9.5 and later.
+// The setup commands in README.md write these for you. This file shows where each one lives.
+// It is a fragment: your own file also holds your gateway, model, and login settings.
+//
+// Two agents on one gateway, each with its own workspace and Telegram bot:
+//   main:    the personal assistant (workspaces/personal-assistant)
+//   scratch: a near-empty agent you shape yourself (workspaces/scratch)
+{
+  agents: {
+    entries: {
+      // Your first agent, created during onboarding, with the personal-assistant workspace.
+      main: {
+        workspace: "~/.openclaw/workspace",
+      },
+      scratch: {
+        workspace: "~/.openclaw/workspace-scratch",
+
+        // No recurring heartbeat. The scratch agent works only when you message it.
+        heartbeat: { every: "0m" },
+      },
+    },
+  },
+
+  // Each Telegram bot routes to one agent. With more than one agent, a bot without a rule is blocked.
+  bindings: [
+    { agentId: "main", match: { channel: "telegram", accountId: "default" } },
+    { agentId: "scratch", match: { channel: "telegram", accountId: "scratch" } },
+  ],
+
+  channels: {
+    telegram: {
+      accounts: {
+        default: { botToken: "<YOUR_ASSISTANT_BOT_TOKEN>", dmPolicy: "pairing" },
+        scratch: { botToken: "<YOUR_SCRATCH_BOT_TOKEN>", dmPolicy: "pairing" },
+      },
+    },
+  },
+
+  tools: {
+    // Agents can read each other's conversations unless you turn it off.
+    sessions: { visibility: "agent" },
+    agentToAgent: { enabled: false },
+  },
+}

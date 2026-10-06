@@ -1,0 +1,13 @@
+# OpenClaw runtime state
+.openclaw/
+**/heartbeat-state.json
+
+# Secrets
+.env
+*.env.local
+
+# OS and Python files
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
